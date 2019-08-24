@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+ </head>
+<body>
+        <button id="botao">Novo Quadrado</button>
+
+        <div id="squares"></div>
+    <script>
+        var bnt = document.getElementById('botao');
+        var squaresElement = document.getElementById('squares');
+
+        function getRandomColor() {
+        var letters = '0123456789ABCDEF';
+        var color = '#';
+        for (var i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+      }
+      return color;
+    }
+
+        bnt.onclick = function redBox() {
+            var square = document.createElement('div');
+            square.style.width = 100;
+            square.style.height = 100;
+            square.style.backgroundColor = '#F00' ;
+
+            squaresElement.appendChild(square);
+
+            square.onmouseover = function () {
+                square.style.backgroundColor = getRandomColor();
+            }
+        }
+    </script>
+    </body>
+</html>

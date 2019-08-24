@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+ </head>
+<body>
+        <button id="botao">Novo Quadrado</button>
+
+        <div id="squares"></div>
+    <script>
+        var bnt = document.getElementById('botao');
+        var squaresElement = document.getElementById('squares');
+
+        bnt.onclick = function redBox() {
+            var square = document.createElement('div');
+            square.style.width = 100;
+            square.style.height = 100;
+            square.style.backgroundColor = '#F00' ;
+
+            squaresElement.appendChild(square);
+            }
+    </script>
+    </body>
+</html>
